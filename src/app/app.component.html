@@ -1,1 +1,10 @@
-<app-select-tree-node [Items]="CMLItemGroups"></app-select-tree-node>
+<form #f="ngForm">
+    <app-select-tree-node [Items]="CMLItemGroups"
+    [(ngModel)]="selectedNode.id"
+    name="selectedNodeId"
+    #Parent
+    required></app-select-tree-node>
+  
+
+<input type="submit" value="Submit" (click)="submit()">
+</form>
